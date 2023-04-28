@@ -1,0 +1,8 @@
+php_flag magic_quotes_gpc off
+AddDefaultCharset UTF-8
+DirectoryIndex index.php
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /?url=$1 [L,QSA]
